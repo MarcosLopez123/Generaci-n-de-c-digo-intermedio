@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Proyecto Unidad 2</title>
+   <style>
+       body{
+           background-color: rgb(235, 224, 224);
+           margin: 50px;
+       }
+       input, button{
+           background-color: rgb(104, 74, 104);
+           color: honeydew;
+       }
+       .c3{
+           padding: 15px;
+           border-radius : 35px;
+           color: beige;
+           background-color: rgb(128, 119, 119) ;
+       }
+   </style>
+</head>
+<body>   
+
+<div class="c3"><!-- CASO 3 -->
+    <h3>CASO 3</h3>
+    <label for="caso3">2 símbolos aritméticos con paréntesis. Ejemplo: X = (a+ 2) / 3 + b<br> <br> Ingresa la Expresion.</label><br>
+    <label for="expre3"> </label><label for="expresion3">X = </label>
+    <input type="text" id="expresion3" name="expresion3"><br> <br>
+    <button type="button" onclick="caso3()">Aceptar</button><br><br>
+    <label>Expresion Ingresada: X = </label><label id="mostrarExpI3"></label><br>
+    <br><label>Desarrollo: </label><br>
+    <label id="desarro3"></label><br><br>
+    <label>Resultado</label><br>
+    <label>X = </label><label id="textmod3"></label><br>
+    <!--<p id="HastaAquiBM3">aqui</p>-->
+</div>
+   
+<script>    
+    function caso3(){
+        var expIngresada = document.getElementById("expresion3").value;
+        document.getElementById("mostrarExpI3").innerHTML=expIngresada; 
+        let cPAbier;
+        var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;
+        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); 
+        var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
+        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
+        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
+        var sma=/( |)(\*|\/)( |)/gm; 
+        var signosmenores=/( |)(\+|\-)( |)/gm;
+        
+        var text = ""; var x;  let t; let a; let t2;        
+        var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j;
+        var c=0;
+        t = expIngresada.match(parentesis);
+        while(i3 < cParenterisis){ 
+            t2 = expIngresada.match(parentesis);
+            t[c]=t2[0];
+            for(j=0; j<1; j++){
+                text += "t[" +c + "] = "+ t[c] + "<br>";
+                sup[c] = "t[" +c + "]";  
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+            }    i3++         
+        }                
+         
+        let vari1=expIngresada.match(sma); var v1=vari1.length;
+        while(i4 < v1){ 
+            t2 = expIngresada.match(signoP);
+            t[c]=t2[0];
+            for(j=0; j<1; j++){
+                text += "t[" +c + "] = "+ t[c] + "<br>";
+                sup[c] = "t[" +c + "]";  
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+            }    i4++         
+        }
+        let vsig1=expIngresada.match(signosmenores); var vs1=vsig1.length;
+        while(i5 < vs1){ 
+            t2 = expIngresada.match(signoS);
+            t[c]=t2[0];
+            for(j=0; j<1; j++){
+                text += "t[" +c + "] = "+ t[c] + "<br>";
+                sup[c] = "t[" +c + "]";  
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+            }    i5++         
+        }
+        document.getElementById("desarro3").innerHTML=text; 
+        document.getElementById("textmod3").innerHTML=expIngresada; 
+       
+    }
+</script>
+</body>
+</html>
