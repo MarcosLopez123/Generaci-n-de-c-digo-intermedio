@@ -14,34 +14,19 @@
            background-color: rgb(104, 74, 104);
            color: honeydew;
        }
-       .c1{
-           padding: 15px;
+       .c{ padding: 15px;
            border-radius : 35px;
-           color: beige;
-           background-color: rgb(150, 130, 130) ;
-       }
-
-       .c2{
-           padding: 15px;
-           border-radius : 35px;
-           color: beige;
-           background-color: rgb(117, 97, 97) ;
-       }
-
-       .c3{
-           padding: 15px;
-           border-radius : 35px;
-           color: beige;
-           background-color: rgb(128, 119, 119) ;
-       }
+           color: beige;}
+       .c1{background-color: rgb(150, 130, 130) ; }
+       .c2{background-color: rgb(117, 97, 97) ;   }
+       .c3{background-color: rgb(128, 119, 119) ; }
+       .c4{background-color: rgb(107, 96, 96) ; }
    </style>
 </head>
 <body>   
-    <div class="c1">
-        <!-- CASO 1 -->
+    <div class="c1 c"> <!-- CASO 1 -->
         <h3>CASO 1</h3>
-        <label for="caso1">2 símbolos aritméticos con diferente prioridad. Ejemplo: X = 2 + 5 * Y <br> <br> Ingresa la Expresion.</label>
-        <br>
+        <label for="caso1">2 símbolos aritméticos con diferente prioridad. Ejemplo: X = 2 + 5 * Y <br> <br> Ingresa la Expresion.</label><br>
         <label for="expre"> </label><label for="expresion">X = </label>
         <input type="text" id="expresion" name="expresion"><br> <br>
         <button type="button" onclick="caso1()">Aceptar</button><br><br>
@@ -49,14 +34,11 @@
         <br><label>Desarrollo: </label><br>
         <label id="desarro"></label><br><br>
         <label>Resultado</label><br>
-        <label>X = </label><label id="textmod"></label><br>
-        <!-- <p id="HastaAquiBM">aqui</p>-->
+        <label>X = </label><label id="textmod"></label><br>   <!-- <p id="HastaAquiBM">aqui</p>-->
     </div>
-    <div class="c2">
-        <!-- CASO 2 -->
+    <div class="c2 c"> <!-- CASO 2 -->
         <h3>CASO 2</h3>
-        <label for="caso2">3 símbolos aritméticos con diferente prioridad. Ejemplo: X = a / a + b * b <br> <br> Ingresa la Expresion.</label>
-        <br>
+        <label for="caso2">3 símbolos aritméticos con diferente prioridad. Ejemplo: X = a / a + b * b <br> <br> Ingresa la Expresion.</label> <br>
         <label for="expre2"> </label><label for="expresion2">X = </label>
         <input type="text" id="expresion2" name="expresion2"><br> <br>
         <button type="button" onclick="caso2()">Aceptar</button><br><br>
@@ -64,77 +46,70 @@
         <br><label>Desarrollo: </label><br>
         <label id="desarro2"></label><br><br>
         <label>Resultado</label><br>
-        <label>X = </label><label id="textmod2"></label><br>
-        <!-- <p id="HastaAquiBM2">aqui</p> -->
+        <label>X = </label><label id="textmod2"></label><br><!-- <p id="HastaAquiBM2">aqui</p> -->
     </div>
-
-<div class="c3"><!-- CASO 3 -->
-    <h3>CASO 3</h3>
-    <label for="caso3">2 símbolos aritméticos con paréntesis. Ejemplo: X = (a+ 2) / 3 + b<br> <br> Ingresa la Expresion.</label><br>
-    <label for="expre3"> </label><label for="expresion3">X = </label>
-    <input type="text" id="expresion3" name="expresion3"><br> <br>
-    <button type="button" onclick="caso3()">Aceptar</button><br><br>
-    <label>Expresion Ingresada: X = </label><label id="mostrarExpI3"></label><br>
-    <br><label>Desarrollo: </label><br>
-    <label id="desarro3"></label><br><br>
-    <label>Resultado</label><br>
-    <label>X = </label><label id="textmod3"></label><br>
-    <!--<p id="HastaAquiBM3">aqui</p>-->
-</div>
+    <div class="c3 c"><!-- CASO 3 -->
+        <h3>CASO 3</h3>
+        <label for="caso3">2 símbolos aritméticos con paréntesis. Ejemplo: X = (a+ 2) / 3 + b<br> <br> Ingresa la Expresion.</label><br>
+        <label for="expre3"> </label><label for="expresion3">X = </label>
+        <input type="text" id="expresion3" name="expresion3"><br> <br>
+        <button type="button" onclick="caso3()">Aceptar</button><br><br>
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI3"></label><br>
+        <br><label>Desarrollo: </label><br>
+        <label id="desarro3"></label><br><br>
+        <label>Resultado</label><br>
+        <label>X = </label><label id="textmod3"></label><br> <!--<p id="HastaAquiBM3">aqui</p>-->
+    </div>
+    <div class="c4 c"><!-- CASO 4 -->
+        <h3>CASO 4</h3>
+        <label for="caso4">3 Símbolos aritméticos con paréntesis. Ejemplo: X = (a+ 2) / (3 - b)<br> <br> Ingresa la Expresion.</label>  <br>
+        <label for="expre4"> </label><label for="expresion4">X = </label>
+        <input type="text" id="expresion4" name="expresion4"><br> <br>
+        <button type="button" onclick="caso4()">Aceptar</button><br><br>
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI4"></label><br>
+        <br><label>Desarrollo: </label><br>
+        <label id="desarro4"></label><br><br>
+        <label>Resultado</label><br>
+        <label>X = </label><label id="textmod4"></label><br> <!--<p id="HastaAquiBM4">aqui</p>-->
+    </div>
    
 <script>    
-function caso1(){
-        //var porId=document.getElementById("nombre").value;
+    function caso1(){
         var expIngresada = document.getElementById("expresion").value;
         document.getElementById("mostrarExpI").innerHTML=expIngresada; 
         var signosP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
         var signosS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-       var mod;
-        let t;
-        let t2;
+        var mod; let t; let t2;
         t = expIngresada.match(signosP);
-
-        var text = "";
-        var sup =["ini"];
-        var i;
+        var text = ""; var sup =["ini"]; var i;
 
         for (i = 0; i < t.length; i++) {
-        text += "t[" +i + "] = "+ t[i] + "<br>";
-        sup[i] = "t[" +i + "]";  
-        expIngresada = expIngresada.replace(t[i],sup[i]);
+            text += "t[" +i + "] = "+ t[i] + "<br>";
+            sup[i] = "t[" +i + "]";  
+            expIngresada = expIngresada.replace(t[i],sup[i]);
         }
-        //Probar si esta HastaAquiBM
-      	//document.getElementById("HastaAquiBM").innerHTML=expIngresada;
-    	// document.getElementById("prueba").innerHTML=expIngresada;
-	t2 = expIngresada.match(signosS);
-    	//Testeo document.getElementById("HastaAquiBM").innerHTML=t2;
+	    t2 = expIngresada.match(signosS);
         i=t.length;
         for (j=0; j< t2.length; j++) {
-        t[i]=t2[j];
-        text += "t[" +i + "] = "+ t[i] /*+"["+j + "]"*/+"<br>";
-        sup[i] = "t[" +i + "]";  
-        expIngresada = expIngresada.replace(t[i],sup[i]); i++
+            t[i]=t2[j];
+            text += "t[" +i + "] = "+ t[i] /*+"["+j + "]"*/+"<br>";
+            sup[i] = "t[" +i + "]";  
+            expIngresada = expIngresada.replace(t[i],sup[i]); i++
         }
-        //expIngresada=sup[sup.length-1];
         //Muestra todos los pasos que se siguio
         document.getElementById("desarro").innerHTML=text;
         //Asigna a X la última variable utilizada
         document.getElementById("textmod").innerHTML=expIngresada; 
-
     }
     function caso2(){
         var expIngresada = document.getElementById("expresion2").value;
         document.getElementById("mostrarExpI2").innerHTML=expIngresada; 
         var signosP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
         var signosS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var sigman=/( |)(\*|\/)( |)/gm; var sigmen=/( |)(\+|\-)( |)/gm;
-        let t; let a; let t2; 
+        var sigman=/( |)(\*|\/)( |)/gm; var sigmen=/( |)(\+|\-)( |)/gm; let t; let a; let t2; 
         let sigg = expIngresada.match(sigman); var cantP=sigg.length;//para saber cuántos signos prioritarios
         let sigmenor = expIngresada.match(sigmen); var cantSignosM = sigmenor.length;//para saber cuántos signos menos prioritarios
-        //t = expIngresada.match(signosP);
-        var text = ""; var x;
-        var sup =["ini"]; var i=0; var i2=0; var j;
-        var c=0,co=0;
+        var text = ""; var x; var sup =["ini"]; var i=0; var i2=0; var j; var c=0,co=0;
         t = expIngresada.match(signosP);
         while(i < cantP){ 
             t2 = expIngresada.match(signosP);
@@ -145,7 +120,6 @@ function caso1(){
                 expIngresada = expIngresada.replace(t[c],sup[c]); c++                
             }    i++         
         }
-           // document.getElementById("HastaAquiBM2").innerHTML=text;  
         while(i2 < cantSignosM){ 
             t2 = expIngresada.match(signosS);
             t[c]=t2[0];
@@ -155,8 +129,8 @@ function caso1(){
                 expIngresada = expIngresada.replace(t[c],sup[c]); c++                
             }    i2++         
         }
-            document.getElementById("desarro2").innerHTML=text; 
-            document.getElementById("textmod2").innerHTML=expIngresada;                
+        document.getElementById("desarro2").innerHTML=text; 
+        document.getElementById("textmod2").innerHTML=expIngresada;                
     }
     function caso3(){
         var expIngresada = document.getElementById("expresion3").value;
@@ -167,12 +141,8 @@ function caso1(){
         var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
         var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
         var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var sma=/( |)(\*|\/)( |)/gm; 
-        var signosmenores=/( |)(\+|\-)( |)/gm;
-        
-        var text = ""; var x;  let t; let a; let t2;        
-        var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j;
-        var c=0;
+        var sma=/( |)(\*|\/)( |)/gm; var signosmenores=/( |)(\+|\-)( |)/gm;        
+        var text = ""; var x;  let t; let a; let t2; var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j; var c=0;
         t = expIngresada.match(parentesis);
         while(i3 < cParenterisis){ 
             t2 = expIngresada.match(parentesis);
@@ -182,8 +152,7 @@ function caso1(){
                 sup[c] = "t[" +c + "]";  
                 expIngresada = expIngresada.replace(t[c],sup[c]); c++                
             }    i3++         
-        }                
-         
+        }                         
         let vari1=expIngresada.match(sma); var v1=vari1.length;
         while(i4 < v1){ 
             t2 = expIngresada.match(signoP);
@@ -206,7 +175,56 @@ function caso1(){
         }
         document.getElementById("desarro3").innerHTML=text; 
         document.getElementById("textmod3").innerHTML=expIngresada; 
-       
+    }
+    function caso4(){
+        var expIngresada = document.getElementById("expresion4").value;
+        document.getElementById("mostrarExpI4").innerHTML=expIngresada; let cPAbier;
+        var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;
+        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); 
+        var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
+        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
+        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
+        var mensR =/[a-zA-Z0-9]{1,}\[\d\]{1}/gm; var sma=/( |)(\*|\/)( |)/gm; var signosmenores=/( |)(\+|\-)( |)/gm;
+        var text = ""; var x;  let t; let a; let t2; var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j; var c=0;
+        t = expIngresada.match(parentesis);
+        while(i3 < cParenterisis){ 
+            t2 = expIngresada.match(parentesis);
+            t[c]=t2[0];
+            for(j=0; j<1; j++){
+                text += "t[" +c + "] = "+ t[c] + "<br>";
+                sup[c] = "t[" +c + "]";  
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+            }    i3++         
+        }        
+        let vari1=expIngresada.match(sma); var v1=vari1.length;
+        while(i4 < v1){ 
+            t2 = expIngresada.match(signoP);
+            t[c]=t2[0];
+            for(j=0; j<1; j++){
+                text += "t[" +c + "] = "+ t[c] + "<br>";
+                sup[c] = "t[" +c + "]";  
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+            }    i4++         
+        }
+       let vsig1=expIngresada.match(mensR); var vs1=vsig1.length;
+       if(vs1==1){
+        document.getElementById("desarro4").innerHTML=text; 
+        document.getElementById("textmod4").innerHTML=expIngresada; 
+       } 
+       let varia2=expIngresada.match(signosmenores); var v3=varia2.length; 
+       if(v3>0){         
+            while(i5 < v3){ 
+                t2 = expIngresada.match(signoS);
+                t[c]=t2[0];
+                for(j=0; j<1; j++){
+                    text += "t[" +c + "] = "+ t[c] + "<br>";
+                    sup[c] = "t[" +c + "]";  
+                    expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+                }    i5++         
+            }
+            document.getElementById("desarro4").innerHTML=text; 
+            document.getElementById("textmod4").innerHTML=expIngresada;         
+       }     
     }
 </script>
 </body>
