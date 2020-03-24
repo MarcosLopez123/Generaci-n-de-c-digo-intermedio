@@ -21,6 +21,7 @@
        .c2{background-color: rgb(117, 97, 97) ;   }
        .c3{background-color: rgb(128, 119, 119) ; }
        .c4{background-color: rgb(107, 96, 96) ; }
+       .c5{background-color: rgb(114, 92, 92) ;   }
    </style>
 </head>
 <body>   
@@ -71,6 +72,24 @@
         <label id="desarro4"></label><br><br>
         <label>Resultado</label><br>
         <label>X = </label><label id="textmod4"></label><br> <!--<p id="HastaAquiBM4">aqui</p>-->
+    </div>
+    <div class="c5 c">
+        <!-- CASO 5 -->
+        <h3>CASO 5</h3>
+        <label for="caso5">Al menos 2 símbolos aritméticos con anidamiento de paréntesis. Ejemplo: X = 2*y - ((4*y) + z) <br> <br> Ingresa la Expresion.</label><br>
+        <label for="expre5"> </label><label for="expresion5">X = </label>
+    
+        <input type="text" id="expresion5" name="expresion5">
+        <br>
+        <br>
+        <button type="button" onclick="caso5()">Aceptar</button><br><br>
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI5"></label><br>
+        <br><label>Desarrollo: </label>
+        <br>
+        <label id="desarro5"></label><br><br>
+        <label>Resultado</label><br>
+        <label>X = </label><label id="textmod5"></label><br>
+        <!--<p id="HastaAquiBM5">aqui</p>-->
     </div>
    
 <script>    
@@ -226,6 +245,33 @@
             document.getElementById("textmod4").innerHTML=expIngresada;         
        }     
     }
+    function caso5(){
+        var expIngresada = document.getElementById("expresion5").value;
+        document.getElementById("mostrarExpI5").innerHTML=expIngresada; 
+        let cPAbier;
+        //var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;
+        var parentesis =/\(( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)( |)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)( |)\)/gm;
+        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); 
+        var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
+        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
+        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
+        var sma=/( |)(\*|\/)( |)/gm; 
+        var signosmenores=/( |)(\+|\-)( |)/gm;
+        var mensR =/[a-zA-Z0-9]{1,}\[\d\]{1}/gm;
+        var noSma=/[a-zA-Z0-9]{1,}\[\d\]{1}( |)(\+|\-)/gm;
+        var text = ""; var x;  let t; let a; let t2;        
+        var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j;
+        var c=0;
+        t = expIngresada.match(parentesis);
+        while(i3 < cParenterisis){ 
+            t2 = expIngresada.match(parentesis);
+            t[c]=t2[0];
+            for(j=0; j<1; j++){
+                text += "t[" +c + "] = "+ t[c] + "<br>";
+                sup[c] = "t[" +c + "]";  
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+            }    i3++         
+        }
 </script>
 </body>
 </html>
