@@ -272,6 +272,54 @@
                 expIngresada = expIngresada.replace(t[c],sup[c]); c++                
             }    i3++         
         }
+let vva1; vva1 = expIngresada.match(sma); 
+        if(vva1==null){ //SI NO EXISTE OPERACIONES CON LOS SIGNOS * Y / ENTONCES, SE BUSCA SI EXISTE OPERACIONES CON + Y -.
+            let varia2=expIngresada.match(signosmenores); var v3=varia2.length;
+            while(i5 < v3){ 
+                t2 = expIngresada.match(signoS);
+                t[c]=t2[0];
+                for(j=0; j<1; j++){
+                    text += "t[" +c + "] = "+ t[c] + "<br>";
+                    sup[c] = "t[" +c + "]";  
+                    expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+                }    i5++         
+            }
+            document.getElementById("desarro5").innerHTML=text; 
+            document.getElementById("textmod5").innerHTML=expIngresada; 
+
+        }
+       //Si existen operaciones con los signos * y / los realiza
+       let vari1=expIngresada.match(sma); var v1=vari1.length;
+       while(i4 < v1){ 
+            t2 = expIngresada.match(signoP);
+            t[c]=t2[0];
+            for(j=0; j<1; j++){
+                text += "t[" +c + "] = "+ t[c] + "<br>";
+                sup[c] = "t[" +c + "]";  
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+            }    i4++         
+        }
+       let vsig1=expIngresada.match(mensR); var vs1=vsig1.length;
+       if(vs1==1){//Si la expresion solo tiene una operación entonces muestra el resultado
+        document.getElementById("desarro5").innerHTML=text; 
+        document.getElementById("textmod5").innerHTML=expIngresada; 
+       } 
+       let varia2=expIngresada.match(signosmenores); var v3=varia2.length;
+       //document.getElementById("HastaAquiBM5").innerHTML=v3;
+       if(v3>0){  //Si existe alguna operación con el signo + o - entonces sigue simplificando las operaciones. y al final imprime los resultados.   
+            while(i5 < v3){ 
+                t2 = expIngresada.match(signoS);
+                t[c]=t2[0];
+                for(j=0; j<1; j++){
+                    text += "t[" +c + "] = "+ t[c] + "<br>";
+                    sup[c] = "t[" +c + "]";  
+                    expIngresada = expIngresada.replace(t[c],sup[c]); c++                
+                }    i5++         
+            }
+            document.getElementById("desarro5").innerHTML=text; 
+            document.getElementById("textmod5").innerHTML=expIngresada;         
+       }   
+    }
 </script>
 </body>
 </html>
