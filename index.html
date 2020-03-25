@@ -5,321 +5,310 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Proyecto Unidad 2</title>
+    <!-- Todo lo que está incluido en la etiqueta Style, se utiliza para darle un buen diseño al programa -->
    <style>
+       /*sirve para darle un estilo general todo el body */
        body{
            background-color: rgb(235, 224, 224);
            margin: 50px;
        }
+       /*A las etiquetas input y button, se les asigno un estilo con color*/
        input, button{
            background-color: rgb(104, 74, 104);
            color: honeydew;
        }
+       /*La clase c, se utilizo para todos los div que representan cada caso*/
        .c{ padding: 15px;
            border-radius : 35px;
            color: beige;}
-       .c1{background-color: rgb(150, 130, 130) ; }
-       .c2{background-color: rgb(117, 97, 97) ;   }
-       .c3{background-color: rgb(128, 119, 119) ; }
-       .c4{background-color: rgb(107, 96, 96) ; }
-       .c5{background-color: rgb(114, 92, 92) ;   }
+       .c1{background-color: rgb(150, 130, 130) ; } /*La clase c1, sirve solo para asignarle al caso 1 un color diferente a las demás*/
+       .c2{background-color: rgb(117, 97, 97) ;   } /*La clase c2, sirve solo para asignarle al caso 2 un color diferente a las demás*/
+       .c3{background-color: rgb(128, 119, 119) ; } /*La clase c3, sirve solo para asignarle al caso 3 un color diferente a las demás*/
+       .c4{background-color: rgb(107, 96, 96) ; }   /*La clase c4, sirve solo para asignarle al caso 4 un color diferente a las demás*/
+       .c5{background-color: rgb(114, 92, 92) ;   } /*La clase c5, sirve solo para asignarle al caso 5 un color diferente a las demás*/
    </style>
 </head>
 <body>   
+    <!-- Esta etiqueta div, tiene la clase c1 y c que identifica que sirve para representar al caso 1 -->
     <div class="c1 c"> <!-- CASO 1 -->
-        <h3>CASO 1</h3>
+        <h3>CASO 1</h3> <!-- Titulo del caso correspondiente -->
+        <!-- Eqtiquetas que sirven para poder ingresar la expresión, mostrar el desarrollo que se sigue y mostrar el resultado del caso correspondiente-->
         <label for="caso1">2 símbolos aritméticos con diferente prioridad. Ejemplo: X = 2 + 5 * Y <br> <br> Ingresa la Expresion.</label><br>
-        <label for="expre"> </label><label for="expresion">X = </label>
-        <input type="text" id="expresion" name="expresion"><br> <br>
-        <button type="button" onclick="caso1()">Aceptar</button><br><br>
-        <label>Expresion Ingresada: X = </label><label id="mostrarExpI"></label><br>
-        <br><label>Desarrollo: </label><br>
-        <label id="desarro"></label><br><br>
-        <label>Resultado</label><br>
-        <label>X = </label><label id="textmod"></label><br>   <!-- <p id="HastaAquiBM">aqui</p>-->
+        <label for="expre"> </label><label for="expresion">X = </label>                
+        <input type="text" id="expresion" name="expresion"><br> <br>                     <!-- Etiqueta que sirve para ingresar la expresión -->
+        <button type="button" onclick="caso1()">Aceptar</button><br><br>                 <!-- Botón para ejecutar la función caso1() -->
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI"></label><br>     <!-- En esta etiqueta se guarda la expresión que se ingreso-->
+        <br><label>Desarrollo: </label><br><label id="desarro"></label><br><br>          <!-- En esta etiqueta se almacena toda el desarrolo que se hace para simplificar las operacion -->
+        <label>Resultado</label><br> <label>X = </label><label id="textmod"></label><br> <!-- Sirve para mostrar el resultado de lla variable X-->
     </div>
+    <!-- Esta etiqueta div, tiene la clase c2 y c que identifica que sirve para representar al caso 2 -->
     <div class="c2 c"> <!-- CASO 2 -->
-        <h3>CASO 2</h3>
+        <h3>CASO 2</h3><!-- Titulo del caso correspondiente -->
+        <!-- Eqtiquetas que sirven para poder ingresar la expresión, mostrar el desarrollo que se sigue y mostrar el resultado del caso correspondiente-->
         <label for="caso2">3 símbolos aritméticos con diferente prioridad. Ejemplo: X = a / a + b * b <br> <br> Ingresa la Expresion.</label> <br>
-        <label for="expre2"> </label><label for="expresion2">X = </label>
-        <input type="text" id="expresion2" name="expresion2"><br> <br>
-        <button type="button" onclick="caso2()">Aceptar</button><br><br>
-        <label>Expresion Ingresada: X = </label><label id="mostrarExpI2"></label><br>
-        <br><label>Desarrollo: </label><br>
-        <label id="desarro2"></label><br><br>
-        <label>Resultado</label><br>
-        <label>X = </label><label id="textmod2"></label><br><!-- <p id="HastaAquiBM2">aqui</p> -->
+        <label for="expre2"> </label><label for="expresion2">X = </label>              
+        <input type="text" id="expresion2" name="expresion2"><br> <br>                   <!-- Etiqueta que sirve para ingresar la expresión -->
+        <button type="button" onclick="caso2()">Aceptar</button><br><br>                 <!-- Botón para ejecutar la función caso1() -->
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI2"></label><br>    <!-- En esta etiqueta se guarda la expresión que se ingreso-->
+        <br><label>Desarrollo: </label><br> <label id="desarro2"></label><br><br>        <!-- En esta etiqueta se almacena toda el desarrolo que se hace para simplificar las operacion -->
+        <label>Resultado</label><br><label>X = </label><label id="textmod2"></label><br> <!-- Sirve para mostrar el resultado de lla variable X-->
     </div>
+    <!-- Esta etiqueta div, tiene la clase c3 y c que identifica que sirve para representar al caso 3 -->
     <div class="c3 c"><!-- CASO 3 -->
-        <h3>CASO 3</h3>
+        <h3>CASO 3</h3><!-- Titulo del caso correspondiente -->
+        <!-- Eqtiquetas que sirven para poder ingresar la expresión, mostrar el desarrollo que se sigue y mostrar el resultado del caso correspondiente-->
         <label for="caso3">2 símbolos aritméticos con paréntesis. Ejemplo: X = (a+ 2) / 3 + b<br> <br> Ingresa la Expresion.</label><br>
-        <label for="expre3"> </label><label for="expresion3">X = </label>
-        <input type="text" id="expresion3" name="expresion3"><br> <br>
-        <button type="button" onclick="caso3()">Aceptar</button><br><br>
-        <label>Expresion Ingresada: X = </label><label id="mostrarExpI3"></label><br>
-        <br><label>Desarrollo: </label><br>
-        <label id="desarro3"></label><br><br>
-        <label>Resultado</label><br>
-        <label>X = </label><label id="textmod3"></label><br> <!--<p id="HastaAquiBM3">aqui</p>-->
+        <label for="expre3"> </label><label for="expresion3">X = </label>               
+        <input type="text" id="expresion3" name="expresion3"><br> <br>                   <!-- Etiqueta que sirve para ingresar la expresión -->
+        <button type="button" onclick="caso3()">Aceptar</button><br><br>                 <!-- Botón para ejecutar la función caso1() -->
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI3"></label><br>    <!-- En esta etiqueta se guarda la expresión que se ingreso-->
+        <br><label>Desarrollo: </label><br><label id="desarro3"></label><br><br>         <!-- En esta etiqueta se almacena toda el desarrolo que se hace para simplificar las operacion -->
+        <label>Resultado</label><br><label>X = </label><label id="textmod3"></label><br> <!-- Sirve para mostrar el resultado de lla variable X-->
     </div>
+    <!-- Esta etiqueta div, tiene la clase c4 y c que identifica que sirve para representar al caso 4 -->
     <div class="c4 c"><!-- CASO 4 -->
-        <h3>CASO 4</h3>
+        <h3>CASO 4</h3><!-- Titulo del caso correspondiente -->
+        <!-- Eqtiquetas que sirven para poder ingresar la expresión, mostrar el desarrollo que se sigue y mostrar el resultado del caso correspondiente-->
         <label for="caso4">3 Símbolos aritméticos con paréntesis. Ejemplo: X = (a+ 2) / (3 - b)<br> <br> Ingresa la Expresion.</label>  <br>
         <label for="expre4"> </label><label for="expresion4">X = </label>
-        <input type="text" id="expresion4" name="expresion4"><br> <br>
-        <button type="button" onclick="caso4()">Aceptar</button><br><br>
-        <label>Expresion Ingresada: X = </label><label id="mostrarExpI4"></label><br>
-        <br><label>Desarrollo: </label><br>
-        <label id="desarro4"></label><br><br>
-        <label>Resultado</label><br>
-        <label>X = </label><label id="textmod4"></label><br> <!--<p id="HastaAquiBM4">aqui</p>-->
+        <input type="text" id="expresion4" name="expresion4"><br> <br>                   <!-- Etiqueta que sirve para ingresar la expresión -->
+        <button type="button" onclick="caso4()">Aceptar</button><br><br>                 <!-- Botón para ejecutar la función caso1() -->
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI4"></label><br>    <!-- En esta etiqueta se guarda la expresión que se ingreso-->
+        <br><label>Desarrollo: </label><br><label id="desarro4"></label><br><br>         <!-- En esta etiqueta se almacena toda el desarrolo que se hace para simplificar las operacion -->
+        <label>Resultado</label><br><label>X = </label><label id="textmod4"></label><br> <!-- Sirve para mostrar el resultado de lla variable X-->
     </div>
-    <div class="c5 c">
-        <!-- CASO 5 -->
-        <h3>CASO 5</h3>
+    <!-- Esta etiqueta div, tiene la clase c5 y c que identifica que sirve para representar al caso 5 -->
+    <div class="c5 c"><!-- CASO 5 -->
+        <h3>CASO 5</h3><!-- Titulo del caso correspondiente -->
+        <!-- Eqtiquetas que sirven para poder ingresar la expresión, mostrar el desarrollo que se sigue y mostrar el resultado del caso correspondiente-->
         <label for="caso5">Al menos 2 símbolos aritméticos con anidamiento de paréntesis. Ejemplo: X = 2*y - ((4*y) + z) <br> <br> Ingresa la Expresion.</label><br>
         <label for="expre5"> </label><label for="expresion5">X = </label>
-    
-        <input type="text" id="expresion5" name="expresion5">
-        <br>
-        <br>
-        <button type="button" onclick="caso5()">Aceptar</button><br><br>
-        <label>Expresion Ingresada: X = </label><label id="mostrarExpI5"></label><br>
-        <br><label>Desarrollo: </label>
-        <br>
-        <label id="desarro5"></label><br><br>
-        <label>Resultado</label><br>
-        <label>X = </label><label id="textmod5"></label><br>
-        <!--<p id="HastaAquiBM5">aqui</p>-->
+        <input type="text" id="expresion5" name="expresion5"><br><br>                    <!-- Etiqueta que sirve para ingresar la expresión -->
+        <button type="button" onclick="caso5()">Aceptar</button><br><br>                 <!-- Botón para ejecutar la función caso1() -->
+        <label>Expresion Ingresada: X = </label><label id="mostrarExpI5"></label><br>    <!-- En esta etiqueta se guarda la expresión que se ingreso-->
+        <br><label>Desarrollo: </label><br><label id="desarro5"></label><br><br>         <!-- En esta etiqueta se almacena toda el desarrolo que se hace para simplificar las operacion -->
+        <label>Resultado</label><br><label>X = </label><label id="textmod5"></label><br> <!-- Sirve para mostrar el resultado de lla variable X-->
     </div>
    
-<script>    
+<script>   
+    //Función para el caso 1
     function caso1(){
-        var expIngresada = document.getElementById("expresion").value;
-        document.getElementById("mostrarExpI").innerHTML=expIngresada; 
-        var signosP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var signosS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var mod; let t; let t2;
-        t = expIngresada.match(signosP);
-        var text = ""; var sup =["ini"]; var i;
+        var expIngresada = document.getElementById("expresion").value;              //Se obtiene la expresión ingresada y se guarda en una variable
+        document.getElementById("mostrarExpI").innerHTML=expIngresada;              //Se asigna la expresión ingresada a la etiqueta que tiene el id = mostrarExpI.
+        var signosP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;    //La variable signosP contiene la expresión regular que ayuda a encontrar las operaciones con * o /.
+        var signosS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;    //La variable signosS contiene la expresión regular que ayuda a encontrar las operaciones con + o -.
+        var text = ""; var sup =["ini"]; var i; var mod; let t; let t2; t = expIngresada.match(signosP);                //La variable t,contiene todos las operaciones con los signos * o /
+        for (i = 0; i < t.length; i++) {                                            //Se inicia un ciclo for donde se reemplaza  por un temporal las operaciones con el signo * o /.
+            text += "t[" +i + "] = "+ t[i] + "<br>";                                //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+            sup[i] = "t[" +i + "]";                                                 //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+            expIngresada = expIngresada.replace(t[i],sup[i]);                       //En la expresion se sustituye la expresión almacenada en t[i] por el temporal que tien sup[i] 
+        }   //Fin de for
+	    t2 = expIngresada.match(signosS); i=t.length;                               //La variable i, contiene la cantidad de operaciones con los signos + o -.
+        for (j=0; j< t2.length; j++) {                                              //Se inicia un ciclo for donde se reemplaza  por un temporal las operaciones con el signo * o /.
+            t[i]=t2[j];                                                             //Se le asigna a t[i], lo que tiene t2 en la posición [j]
+            text += "t[" +i + "] = "+ t[i] +"<br>";                                 //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+            sup[i] = "t[" +i + "]";                                                 //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+            expIngresada = expIngresada.replace(t[i],sup[i]); i++                   //En la expresion se sustituye la expresión almacenada en t[i] por el temporal que tien sup[i] 
+        } //Fin for
+        document.getElementById("desarro").innerHTML=text;                          //Muestra todos los pasos que se siguio para simplificar la expresión
+        document.getElementById("textmod").innerHTML=expIngresada;                  //Asigna a X la última variable utilizada
+    }//Fin de la función caso1()
+    
+    function caso2(){ //Función para el caso 2
+        var expIngresada = document.getElementById("expresion2").value;              //Se obtiene la expresión ingresada y se guarda en una variable
+        document.getElementById("mostrarExpI2").innerHTML=expIngresada;              //Se asigna la expresión ingresada a la etiqueta que tiene el id = mostrarExpI2
+        var signosP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;    //La variable signosP contiene la expresión regular que ayuda a encontrar las operaciones con * o /.
+        var signosS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;    //La variable signosS contiene la expresión regular que ayuda a encontrar las operaciones con + o -.
+        var sigman=/( |)(\*|\/)( |)/gm; var sigmen=/( |)(\+|\-)( |)/gm; let t; let a; let t2; var text = ""; var x; var sup =["ini"]; var i=0; var i2=0; var j; var c=0,co=0; //Se declaran las variables
+        let sigg = expIngresada.match(sigman); var cantP=sigg.length;                 //La variable cantP contiene la cantidad de signos * y /.
+        let sigmenor = expIngresada.match(sigmen); var cantSignosM = sigmenor.length; //La variable cantSignosM contiene la cantidad de signos + y -.      
+        t = expIngresada.match(signosP);                                              //La variable t,contiene todos las operaciones con los signos * o /
+        while(i < cantP){                                                             //Si i es menor a la cantidad de signos de* y /. Se repite el ciclo.
+            t2 = expIngresada.match(signosP);                                         //t2 obtiene las operaciones con los signos * y +.
+            t[c]=t2[0];                                                               //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                                                       //Se inicia un ciclo for donde se reemplaza por un temporal la expresión que está entre parentesis.
+                text += "t[" +c + "] = "+ t[c] + "<br>";                              //La variable text, almacena el procedimiento que se sigue para simplificar la operación            
+                sup[c] = "t[" +c + "]";                                               //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++                 //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]              
+            } i++  //Incrementa i       
+        } //Fin while
+        while(i2 < cantSignosM){                          //Mientras i2 sea menor a la cantidad de signos + y -, se repite el ciclo.      
+            t2 = expIngresada.match(signosS);               //t2 almacena las operaciones que tienen los signos + o -.
+            t[c]=t2[0];                                   //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                           //Se inicia un ciclo for donde se reemplaza por un temporal la expresión que está entre parentesis.
+                text += "t[" +c + "] = "+ t[c] + "<br>";  //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                   //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++    //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]          
+            } i2++  //Incrementa i2       
+        } //Fin while
+        document.getElementById("desarro2").innerHTML=text;         //Se muestra dentro del html el desarrollo de generación de los temporales.
+        document.getElementById("textmod2").innerHTML=expIngresada; //Se muestra dentro del html el resultado de X               
+    } //Fin de la función caso2()
 
-        for (i = 0; i < t.length; i++) {
-            text += "t[" +i + "] = "+ t[i] + "<br>";
-            sup[i] = "t[" +i + "]";  
-            expIngresada = expIngresada.replace(t[i],sup[i]);
-        }
-	    t2 = expIngresada.match(signosS);
-        i=t.length;
-        for (j=0; j< t2.length; j++) {
-            t[i]=t2[j];
-            text += "t[" +i + "] = "+ t[i] /*+"["+j + "]"*/+"<br>";
-            sup[i] = "t[" +i + "]";  
-            expIngresada = expIngresada.replace(t[i],sup[i]); i++
-        }
-        //Muestra todos los pasos que se siguio
-        document.getElementById("desarro").innerHTML=text;
-        //Asigna a X la última variable utilizada
-        document.getElementById("textmod").innerHTML=expIngresada; 
-    }
-    function caso2(){
-        var expIngresada = document.getElementById("expresion2").value;
-        document.getElementById("mostrarExpI2").innerHTML=expIngresada; 
-        var signosP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var signosS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var sigman=/( |)(\*|\/)( |)/gm; var sigmen=/( |)(\+|\-)( |)/gm; let t; let a; let t2; 
-        let sigg = expIngresada.match(sigman); var cantP=sigg.length;//para saber cuántos signos prioritarios
-        let sigmenor = expIngresada.match(sigmen); var cantSignosM = sigmenor.length;//para saber cuántos signos menos prioritarios
-        var text = ""; var x; var sup =["ini"]; var i=0; var i2=0; var j; var c=0,co=0;
-        t = expIngresada.match(signosP);
-        while(i < cantP){ 
-            t2 = expIngresada.match(signosP);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i++         
-        }
-        while(i2 < cantSignosM){ 
-            t2 = expIngresada.match(signosS);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i2++         
-        }
-        document.getElementById("desarro2").innerHTML=text; 
-        document.getElementById("textmod2").innerHTML=expIngresada;                
-    }
+    //Función para el caso 3
     function caso3(){
-        var expIngresada = document.getElementById("expresion3").value;
-        document.getElementById("mostrarExpI3").innerHTML=expIngresada; 
-        let cPAbier;
-        var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;
-        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); 
-        var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
-        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
+        var expIngresada = document.getElementById("expresion3").value; //Se obtiene la expresión ingresada y se guarda en una variable
+        document.getElementById("mostrarExpI3").innerHTML=expIngresada; //Se asigna la expresión ingresada a la etiqueta que tiene el id = mostrarExpI3
+        let cPAbier; var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;
+        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
+        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm; //La variable signoP contiene la expresión regular que ayuda a encontrar las operaciones con * o /.
+        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm; //La variable signoP contiene la expresión regular que ayuda a encontrar las operaciones con + o -.
         var sma=/( |)(\*|\/)( |)/gm; var signosmenores=/( |)(\+|\-)( |)/gm;        
         var text = ""; var x;  let t; let a; let t2; var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j; var c=0;
-        t = expIngresada.match(parentesis);
-        while(i3 < cParenterisis){ 
-            t2 = expIngresada.match(parentesis);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i3++         
-        }                         
-        let vari1=expIngresada.match(sma); var v1=vari1.length;
-        while(i4 < v1){ 
-            t2 = expIngresada.match(signoP);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i4++         
-        }
-        let vsig1=expIngresada.match(signosmenores); var vs1=vsig1.length;
-        while(i5 < vs1){ 
-            t2 = expIngresada.match(signoS);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i5++         
-        }
-        document.getElementById("desarro3").innerHTML=text; 
-        document.getElementById("textmod3").innerHTML=expIngresada; 
-    }
+        t = expIngresada.match(parentesis);                         //t, contiene las operaciones entre parentesis
+        while(i3 < cParenterisis){                                  //mientras i3 sea menor a la cantidad de parentesis, el bucle se repite.
+            t2 = expIngresada.match(parentesis);                    //t2 almacena las operaciones que están entre parentesis
+            t[c]=t2[0];                                             //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                                     //Se inicia un ciclo for donde se reemplaza por un temporal la expresión que está entre parentesis.
+                text += "t[" +c + "] = "+ t[c] + "<br>";            //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                             //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++    //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]             
+            } i3++ //Incrementa i3
+        } //Fin de while                    
+        let vari1=expIngresada.match(sma); var v1=vari1.length; // v1 contiene la cantidad de signos prioritarios como * y /, que están dentro de la expresión que resulto después de terminar el ciclo while.
+        while(i4 < v1){                                         //Mientras i4 sea menor a la cantidad de v1, el bucle se sigue repitiendo
+            t2 = expIngresada.match(signoP);                    //t2 almacena las operaciones que tienen los signos * o /.
+            t[c]=t2[0];                                         //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                                 //Se inicia un ciclo for donde se reemplaza por un temporal la expresión que está entre parentesis.
+                text += "t[" +c + "] = "+ t[c] + "<br>";        //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                         //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++    //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]             
+            } i4++  //Incrementa i4       
+        }//Fin while
+        let vsig1=expIngresada.match(signosmenores); var vs1=vsig1.length; //vs1 contiene la cantidad de las operaciones con los signos + y -.
+        while(i5 < vs1){                                        //Si i5 es menor a vs1, se repite el bucle while.
+            t2 = expIngresada.match(signoS);                    //t2 almacena las operaciones que tienen los signos + o -
+            t[c]=t2[0];                                         //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                                 //Se inicia un ciclo for donde se reemplaza por un temporal la expresión que está entre parentesis.
+                text += "t[" +c + "] = "+ t[c] + "<br>";        //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                         //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++   //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]              
+            } i5++  //Incrementa i5      
+        } //Fin while
+        document.getElementById("desarro3").innerHTML=text;         //Se muestra dentro del html el desarrollo de generación de los temporales.
+        document.getElementById("textmod3").innerHTML=expIngresada; //Se muestra dentro del html el resultado de X
+    } //Fin de la función caso3()
+
+    //Función para el caso 4 
     function caso4(){
-        var expIngresada = document.getElementById("expresion4").value;
-        document.getElementById("mostrarExpI4").innerHTML=expIngresada; let cPAbier;
-        var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;
-        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); 
-        var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
-        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var mensR =/[a-zA-Z0-9]{1,}\[\d\]{1}/gm; var sma=/( |)(\*|\/)( |)/gm; var signosmenores=/( |)(\+|\-)( |)/gm;
-        var text = ""; var x;  let t; let a; let t2; var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j; var c=0;
-        t = expIngresada.match(parentesis);
-        while(i3 < cParenterisis){ 
-            t2 = expIngresada.match(parentesis);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i3++         
-        }        
-        let vari1=expIngresada.match(sma); var v1=vari1.length;
-        while(i4 < v1){ 
-            t2 = expIngresada.match(signoP);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i4++         
-        }
-       let vsig1=expIngresada.match(mensR); var vs1=vsig1.length;
-       if(vs1==1){
-        document.getElementById("desarro4").innerHTML=text; 
-        document.getElementById("textmod4").innerHTML=expIngresada; 
-       } 
-       let varia2=expIngresada.match(signosmenores); var v3=varia2.length; 
-       if(v3>0){         
-            while(i5 < v3){ 
-                t2 = expIngresada.match(signoS);
-                t[c]=t2[0];
-                for(j=0; j<1; j++){
-                    text += "t[" +c + "] = "+ t[c] + "<br>";
-                    sup[c] = "t[" +c + "]";  
-                    expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-                }    i5++         
-            }
-            document.getElementById("desarro4").innerHTML=text; 
-            document.getElementById("textmod4").innerHTML=expIngresada;         
-       }     
-    }
+        var expIngresada = document.getElementById("expresion4").value; //Se obtiene la expresión ingresada y se guarda en una variable
+        document.getElementById("mostrarExpI4").innerHTML=expIngresada; //Se asigna la expresión ingresada a la etiqueta que tiene el id =mostrarExpI4    let cPAbier;
+        var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;   //La variable parentesis contiene la expresión regular que ayuda a encontrar cualquier operación que este dentro de parentesis
+        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); var cParenterisis=cPAbier.length;            //Para saber la cantidad de parentesis que existen
+        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm; //La variable signoP contiene la expresión regular que ayuda a encontrar las operaciones con * o /.
+        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm; //La variable signoS contiene la expresión regular que ayuda a encontrar las operaciones con + o -.
+        var mensR =/[a-zA-Z0-9]{1,}\[\d\]{1}/gm; var sma=/( |)(\*|\/)( |)/gm; var signosmenores=/( |)(\+|\-)( |)/gm; var text = ""; var x;  let t; let a; let t2; var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j; var c=0;
+        t = expIngresada.match(parentesis);             //La variable t, contiene la cantidad de parentesis de abiertas dentro de la expresión ingresada.
+        while(i3 < cParenterisis){                      //Se crea un ciclo while, donde la condición es que se repita siempre que i3 sea menor a la cantidad de parentesis encontradas en la expresión
+            t2 = expIngresada.match(parentesis);        //t2 almacena las operaciones que están entre parentesis
+            t[c]=t2[0];                                 //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                         //Se inicia un ciclo for donde se reemplaza por un temporal la expresión que está entre parentesis.
+                text += "t[" +c + "] = "+ t[c] + "<br>";    //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                     //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++    //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c].            
+            }    i3++ //Aumenta i3 en un valor.
+        }             //Fin de while
+        let vari1=expIngresada.match(sma); var v1=vari1.length;     //Se le asigna a la variable v1, la cantidad de los signos prioritarios como * y /, que están dentro de la expresión que resulto después de terminar el ciclo while.
+        while(i4 < v1){                                             //Mientras i4 sea menor a la cantidad de signos encontrados se repite el bucle while.
+            t2 = expIngresada.match(signoP);                        //t2 almacena las operaciones que tienen los signos * o /.
+            t[c]=t2[0];                                             //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                                     //Se inicia un ciclo for donde se reemplaza  por un temporal las operaciones con el signo + o - 
+                text += "t[" +c + "] = "+ t[c] + "<br>";            //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                             //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++ //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]                   
+            } i4++     //Aumenta i4 en un valor.              
+        }              //Fin de while             
+       let vsig1=expIngresada.match(mensR); var vs1=vsig1.length;   //Se crea la variable vs1, que almacena la cantidad de temporales que existen hasta ahora dentro de la expresión.
+       if(vs1==1){                                                  //Si la expresion solo tiene una operación entonces muestra el resultado
+        document.getElementById("desarro4").innerHTML=text;         //Se muestra dentro del html el desarrollo de generación de los temporales.
+        document.getElementById("textmod4").innerHTML=expIngresada; //Se muestra dentro del html el resultado de X
+       } //Fin if
+       let varia2=expIngresada.match(signosmenores); var v3=varia2.length;  //La variable v3 contiene la cantidad de operaciones con signos + o - que existen en la expresión.
+       if(v3>0){                                                            //Si existe alguna operación con el signo + o - entonces sigue simplificando las operaciones. y al final imprime los resultados.   
+            while(i5 < v3){                                                 //Mientras i5 sea menor a la cantidad de signos encontrados se repite el bucle while.
+                t2 = expIngresada.match(signoS);                            //t2 almacena las operaciones que tienen los signos + o -           
+                t[c]=t2[0];                                                 //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]           
+                for(j=0; j<1; j++){                                         //Se inicia un ciclo for donde se reemplaza  por un temporal las operaciones con el signo + o -.           
+                    text += "t[" +c + "] = "+ t[c] + "<br>";                //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                    sup[c] = "t[" +c + "]";                                 //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                    expIngresada = expIngresada.replace(t[c],sup[c]); c++   //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]                    
+                } i5++   //Aumenta i5 en un valor.   
+            }   //Fin de while
+            document.getElementById("desarro4").innerHTML=text;             //Se muestra dentro del html el desarrollo de generación de los temporales.
+            document.getElementById("textmod4").innerHTML=expIngresada;     //Se muestra dentro del html el resultado de X  
+       } //Fin de if
+    } //Fin de la Función caso4()
+    //Función para el caso 5
     function caso5(){
-        var expIngresada = document.getElementById("expresion5").value;
-        document.getElementById("mostrarExpI5").innerHTML=expIngresada; 
-        let cPAbier;
-        //var parentesis = /\([a-zA-Z0-9]{1,}( |\[\d\]{1}|)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)\)/gm;
-        var parentesis =/\(( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)( |)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)( |)\)/gm;
-        var parAbier=/\(/gm; cPAbier=expIngresada.match(parAbier); 
-        var cParenterisis=cPAbier.length; //Para saber la cantidad de parentesis que existen
-        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;
-        var sma=/( |)(\*|\/)( |)/gm; 
-        var signosmenores=/( |)(\+|\-)( |)/gm;
-        var mensR =/[a-zA-Z0-9]{1,}\[\d\]{1}/gm;
-        var noSma=/[a-zA-Z0-9]{1,}\[\d\]{1}( |)(\+|\-)/gm;
-        var text = ""; var x;  let t; let a; let t2;        
-        var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j;
-        var c=0;
-        t = expIngresada.match(parentesis);
-        while(i3 < cParenterisis){ 
-            t2 = expIngresada.match(parentesis);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i3++         
-        }
-let vva1; vva1 = expIngresada.match(sma); 
+        var expIngresada = document.getElementById("expresion5").value;     //Se obtiene la expresión ingresada y se guarda en una variable
+        document.getElementById("mostrarExpI5").innerHTML=expIngresada;     //Se asigna la expresión ingresada a la etiqueta que tiene el id =mostrarExpI5
+        let cPAbier; var text = ""; var x;  let t; let a; let t2; var sup =["ini"]; var i4=0; var i5=0; var i3=0; var j; var c=0;   //Se crean todas las variable que se van a utilizar dentro de esta funcion
+        var parentesis =/\(( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)( |)(\*|\/|\+|\-)( |)[a-zA-Z0-9]{1,}( |\[\d\]{1}|)( |)\)/gm;            //La variable parentesis contiene la expresión regular que ayuda a encontrar cualquier operación que este dentro de parentesis
+        var parAbier=/\(/gm;                    //La variable parAbier contiene la expresión regular que ayuda a encontrar todos los parentesis abiertos "("
+        cPAbier=expIngresada.match(parAbier);   //Esta variable cPAbier obtiene todas las los parentesis abiertos
+        var cParenterisis=cPAbier.length;       //cParenterisis contiene la cantidad de parentesis que existen
+        var signoP = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\*|\/)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm;  //La variable parentesis contiene la expresión regular que ayuda a encontrar 
+        var signoS = /[a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|)( |)(\+|\-)( |)([a-zA-Z0-9]{1,}(\d{1,}| |\[\d\]{1}|))/gm; //La variable parentesis contiene la expresión regular que ayuda a encontrar 
+        var sma=/( |)(\*|\/)( |)/gm;                 //La variable sma contiene la expresión regular que ayuda a los signos prioritarios com * y / 
+        var signosmenores=/( |)(\+|\-)( |)/gm;       //La variable signosmenores contiene la expresión regular que ayuda a encontrar los signos + y -
+        var mensR =/[a-zA-Z0-9]{1,}\[\d\]{1}/gm;     //La variable mensR contiene la expresión regular que ayuda a encontrar un temporal, por ejemplo t[5]
+        t = expIngresada.match(parentesis);          //La variable t, contiene la cantidad de parentesis de abiertas dentro de la expresión ingresada.
+        while(i3 < cParenterisis){                  //Se crea un ciclo while, donde la condición es que se repita siempre que i3 sea menor a la cantidad de parentesis encontradas en la expresión
+            t2 = expIngresada.match(parentesis);    //t2 almacena las operaciones que están entre parentesis
+            t[c]=t2[0];                             //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                     //Se inicia un ciclo for donde se reemplaza por un temporal la expresión que está entre parentesis.
+                text += "t[" +c + "] = "+ t[c] + "<br>";    //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                     //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++    //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]
+            }    i3++ //Aumenta i3 en un valor.
+        }             //Fin de while        
+        let vva1; vva1 = expIngresada.match(sma); //Se crea la variable vva1, y esta contiene los signos prioritarios como * y /, que están dentro de la expresión que resulto después de terminar el ciclo while.
         if(vva1==null){ //SI NO EXISTE OPERACIONES CON LOS SIGNOS * Y / ENTONCES, SE BUSCA SI EXISTE OPERACIONES CON + Y -.
-            let varia2=expIngresada.match(signosmenores); var v3=varia2.length;
-            while(i5 < v3){ 
-                t2 = expIngresada.match(signoS);
-                t[c]=t2[0];
-                for(j=0; j<1; j++){
-                    text += "t[" +c + "] = "+ t[c] + "<br>";
-                    sup[c] = "t[" +c + "]";  
-                    expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-                }    i5++         
-            }
-            document.getElementById("desarro5").innerHTML=text; 
-            document.getElementById("textmod5").innerHTML=expIngresada; 
+            let varia2=expIngresada.match(signosmenores); var v3=varia2.length; //La variable v3 obtiene cuántos signos conmenor prioridad com + y - están dentro de la expresión que resulto después de terminar el ciclo while.
+            while(i5 < v3){                                     //Mientras i5 sea menor a la cantidad de signos encontrados se repite el bucle while.
+                t2 = expIngresada.match(signoS);                //t2 almacena las operaciones que tienen los signos + o -
+                t[c]=t2[0];                                     //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+                for(j=0; j<1; j++){                             //Se inicia un ciclo for donde se reemplaza  por un temporal las operaciones con el signo + o - 
+                    text += "t[" +c + "] = "+ t[c] + "<br>";    //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                    sup[c] = "t[" +c + "]";                     //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                    expIngresada = expIngresada.replace(t[c],sup[c]); c++     //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]      
+                }    i5++   //Aumenta i5 en un valor.
+            }               //Fin de while   
+            document.getElementById("desarro5").innerHTML=text;         //Se muestra dentro del html el desarrollo de generación de los temporales.
+            document.getElementById("textmod5").innerHTML=expIngresada; //Se muestra dentro del html el resultado de X
 
         }
        //Si existen operaciones con los signos * y / los realiza
-       let vari1=expIngresada.match(sma); var v1=vari1.length;
-       while(i4 < v1){ 
-            t2 = expIngresada.match(signoP);
-            t[c]=t2[0];
-            for(j=0; j<1; j++){
-                text += "t[" +c + "] = "+ t[c] + "<br>";
-                sup[c] = "t[" +c + "]";  
-                expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-            }    i4++         
-        }
-       let vsig1=expIngresada.match(mensR); var vs1=vsig1.length;
+       let vari1=expIngresada.match(sma); var v1=vari1.length;          //Se le asigna a la variable v1, la cantidad de los signos prioritarios como * y /, que están dentro de la expresión que resulto después de terminar el ciclo while.
+       while(i4 < v1){                                                  //Mientras i4 sea menor a la cantidad de signos encontrados se repite el bucle while.
+            t2 = expIngresada.match(signoP);                            //t2 almacena las operaciones que tienen los signos * o /.
+            t[c]=t2[0];                                                 //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]
+            for(j=0; j<1; j++){                                         //Se inicia un ciclo for donde se reemplaza  por un temporal las operaciones con el signo + o - 
+                text += "t[" +c + "] = "+ t[c] + "<br>";                //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                sup[c] = "t[" +c + "]";                                 //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                expIngresada = expIngresada.replace(t[c],sup[c]); c++   //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]                       
+            }    i4++   //Aumenta i4 en un valor.            
+        }               //Fin de while  
+       let vsig1=expIngresada.match(mensR); var vs1=vsig1.length;       //Se crea la variable vs1, que almacena la cantidad de temporales que existen hasta ahora dentro de la expresión.
        if(vs1==1){//Si la expresion solo tiene una operación entonces muestra el resultado
-        document.getElementById("desarro5").innerHTML=text; 
-        document.getElementById("textmod5").innerHTML=expIngresada; 
-       } 
-       let varia2=expIngresada.match(signosmenores); var v3=varia2.length;
-       //document.getElementById("HastaAquiBM5").innerHTML=v3;
+        document.getElementById("desarro5").innerHTML=text;             //Se muestra dentro del html el desarrollo de generación de los temporales.
+        document.getElementById("textmod5").innerHTML=expIngresada;     //Se muestra dentro del html el resultado de X
+       }                                                                //Fin If
+       let varia2=expIngresada.match(signosmenores); var v3=varia2.length;  //La variable v3 contiene la cantidad de operaciones con signos + o - que existen en la expresión.
        if(v3>0){  //Si existe alguna operación con el signo + o - entonces sigue simplificando las operaciones. y al final imprime los resultados.   
-            while(i5 < v3){ 
-                t2 = expIngresada.match(signoS);
-                t[c]=t2[0];
-                for(j=0; j<1; j++){
-                    text += "t[" +c + "] = "+ t[c] + "<br>";
-                    sup[c] = "t[" +c + "]";  
-                    expIngresada = expIngresada.replace(t[c],sup[c]); c++                
-                }    i5++         
-            }
-            document.getElementById("desarro5").innerHTML=text; 
-            document.getElementById("textmod5").innerHTML=expIngresada;         
-       }   
-    }
+            while(i5 < v3){                                      //Mientras i5 sea menor a la cantidad de signos encontrados se repite el bucle while.           
+                t2 = expIngresada.match(signoS);                 //t2 almacena las operaciones que tienen los signos + o -           
+                t[c]=t2[0];                                      //Se asigna al arreglo t en la posición [c], el primer resultado que se guarda en el arreglo t2[]           
+                for(j=0; j<1; j++){                              //Se inicia un ciclo for donde se reemplaza  por un temporal las operaciones con el signo + o -.           
+                    text += "t[" +c + "] = "+ t[c] + "<br>";                //La variable text, almacena el procedimiento que se sigue para simplificar la operación
+                    sup[c] = "t[" +c + "]";                                 //El arreglo sup[], almacena todos los temporales que estamos utilizando.Por ejemplo: t[0], t[1]
+                    expIngresada = expIngresada.replace(t[c],sup[c]); c++  //En la expresion se sustituye la expresión almacenada en t[c] por el temporal que tien sup[c]                    
+                }    i5++   //Aumenta i5 en un valor.      
+            }               //Fin de while  
+            document.getElementById("desarro5").innerHTML=text;             //Se muestra dentro del html el desarrollo de generación de los temporales.
+            document.getElementById("textmod5").innerHTML=expIngresada;     //Se muestra dentro del html el resultado de X    
+       }    //Fin del if
+    }   //Fin de la función caso5()
 </script>
 </body>
 </html>
