@@ -1,0 +1,21 @@
+/*Todo lo que está incluido en la etiqueta Style, se utiliza para darle un buen diseño al programa */
+
+    /*sirve para darle un estilo general todo el body */
+    body{
+        background-color: rgb(235, 224, 224);
+        margin: 50px;
+    }
+    /*A las etiquetas input y button, se les asigno un estilo con color*/
+    input, button{
+        background-color: rgb(104, 74, 104);
+        color: honeydew;
+    }
+    /*La clase c, se utilizo para todos los div que representan cada caso*/
+    .c{ padding: 15px;
+        border-radius : 35px;
+        color: beige;}
+    .c1{background-color: rgb(150, 130, 130) ; } /*La clase c1, sirve solo para asignarle al caso 1 un color diferente a las demás*/
+    .c2{background-color: rgb(117, 97, 97) ;   } /*La clase c2, sirve solo para asignarle al caso 2 un color diferente a las demás*/
+    .c3{background-color: rgb(128, 119, 119) ; } /*La clase c3, sirve solo para asignarle al caso 3 un color diferente a las demás*/
+    .c4{background-color: rgb(107, 96, 96) ; }   /*La clase c4, sirve solo para asignarle al caso 4 un color diferente a las demás*/
+    .c5{background-color: rgb(114, 92, 92) ;   } /*La clase c5, sirve solo para asignarle al caso 5 un color diferente a las demás*/
