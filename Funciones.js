@@ -20,7 +20,12 @@ function caso1(){
     document.getElementById("desarro").innerHTML=text;                          //Muestra todos los pasos que se siguio para simplificar la expresión
     document.getElementById("textmod").innerHTML=expIngresada;                  //Asigna a X la última variable utilizada
 }//Fin de la función caso1()
-    
+
+
+
+
+
+
 function caso2(){ //Función para el caso 2
     var expIngresada = document.getElementById("expresion2").value;              //Se obtiene la expresión ingresada y se guarda en una variable
     document.getElementById("mostrarExpI2").innerHTML=expIngresada;              //Se asigna la expresión ingresada a la etiqueta que tiene el id = mostrarExpI2
@@ -51,6 +56,12 @@ function caso2(){ //Función para el caso 2
     document.getElementById("desarro2").innerHTML=text;                             //Se muestra dentro del html el desarrollo de generación de los temporales.
     document.getElementById("textmod2").innerHTML=expIngresada;                     //Se muestra dentro del html el resultado de X               
 }     //Fin de la función caso2()
+
+
+
+
+
+
 
 //Función para el caso 3
 function caso3(){
@@ -95,6 +106,11 @@ function caso3(){
     document.getElementById("desarro3").innerHTML=text;                             //Se muestra dentro del html el desarrollo de generación de los temporales.
     document.getElementById("textmod3").innerHTML=expIngresada;                     //Se muestra dentro del html el resultado de X
 } //Fin de la función caso3()
+
+
+
+
+
 
 //Función para el caso 4 
 function caso4(){
@@ -145,6 +161,11 @@ function caso4(){
         document.getElementById("textmod4").innerHTML=expIngresada;                     //Se muestra dentro del html el resultado de X  
     } //Fin de if
 } //Fin de la Función caso4()
+
+
+
+
+
 
 //Función para el caso 5
 function caso5(){
